@@ -38,9 +38,9 @@ const Home = props => {
   {
       event.preventDefault();
 
-      const pokemon = pokemons.filter(pokemon => pokemon.name.toUpperCase() == event.target.value.toUpperCase());
+      const pokemon = pokemons.filter(pokemon => pokemon.name.toUpperCase() === event.target.value.toUpperCase());
 
-      if (pokemon.length != 0)
+      if (pokemon.length !== 0)
       {
         setPokemons(pokemon);
       }
@@ -58,7 +58,7 @@ const Home = props => {
     <ProductList>
       {pokemons.map((pokemon, i) => (
         <li key={i}>
-          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i + 1}.png`} alt="image"/>
+          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i + 1}.png`} alt="front"/>
           <strong>{pokemon.name.toUpperCase()}</strong>
           <span>{formatPrice('24.99')}</span>
           <button type="button" onClick={() => handleAddProduct(pokemon.name, i, '24.99')}>

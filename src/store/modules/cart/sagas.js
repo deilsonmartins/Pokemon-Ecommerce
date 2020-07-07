@@ -1,6 +1,4 @@
 import {
-  call,
-  select,
   put,
   all,
   takeLatest,
@@ -11,7 +9,6 @@ import {
 import {
   addToCartSuccess,
   updateAmountSuccess,
-  updateAmountFailure,
 } from './actions';
 
 function* addToCart({ pokemon }) {
